@@ -1,0 +1,1 @@
+This program develops customized scientific plots using Matplotlib. It demonstrates annotations, legends, subplots, and error visualization to present experimental results clearly and support detailed scientific reporting.
