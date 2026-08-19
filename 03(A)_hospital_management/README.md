@@ -1,0 +1,1 @@
+This program performs statistical analysis of patient health data using Python. It calculates measures such as mean, median, and mode to understand the typical health values, while variance and standard deviation are used to measure the spread and variability of the data.
