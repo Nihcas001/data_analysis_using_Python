@@ -1,0 +1,1 @@
+This program organizes customer order information using Pandas DataFrames. It demonstrates DataFrame creation, indexing, row and column selection, and basic manipulation for efficient handling of structured data.
