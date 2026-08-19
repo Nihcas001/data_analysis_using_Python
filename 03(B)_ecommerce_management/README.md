@@ -1,0 +1,1 @@
+This program analyzes product sales data using Python visualization tools. It creates tables, bar charts, pie charts, and frequency distributions to present sales patterns, compare product performance, and understand the distribution of sales in an easy-to-interpret graphical form.
