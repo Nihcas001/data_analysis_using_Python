@@ -1,0 +1,1 @@
+This program visualizes stock market price data using Matplotlib. It creates line plots to study price trends, scatter plots to examine relationships, and histograms to understand the distribution of share prices or returns.
