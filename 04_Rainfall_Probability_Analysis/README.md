@@ -1,0 +1,1 @@
+This program analyzes weather data to determine the probability of rainfall. It also applies conditional probability to study how the occurrence of one weather condition, such as humidity or cloud cover, affects the likelihood of rainfall.
