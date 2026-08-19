@@ -1,1 +1,0 @@
-This program processes incomplete customer feedback data using Pandas. It handles missing values, merges multiple datasets, and cleans inconsistent records to prepare reliable data for further analysis.
