@@ -1,0 +1,1 @@
+This mini project analyzes real-world urban datasets using Seaborn. It applies advanced visualization techniques such as statistical plots, distribution plots, categorical plots, and relationship analysis to generate meaningful insights for a smart city application.
