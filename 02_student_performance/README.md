@@ -1,0 +1,1 @@
+This program analyzes student performance records using Python. It reads students’ marks and calculates the **average marks**, identifies the **highest marks**, and determines the **distribution of grades** such as A, B, C, D, and F. The program helps understand overall academic performance and summarize student results efficiently.
