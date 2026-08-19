@@ -1,0 +1,1 @@
+This program performs category-wise supermarket sales analysis using Pandas. It applies grouping and aggregation functions and creates pivot tables to summarize and compare sales across different product categories.
