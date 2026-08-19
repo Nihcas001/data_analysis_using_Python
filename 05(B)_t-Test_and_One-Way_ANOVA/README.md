@@ -1,0 +1,1 @@
+This program analyzes experimental healthcare data to compare the effectiveness of medicines. A one-sample t-test is used to compare a sample mean with a reference value, while one-way ANOVA is used to determine whether significant differences exist among multiple medicine groups.
