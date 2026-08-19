@@ -1,0 +1,1 @@
+This program evaluates whether a new manufacturing process improves product quality. It uses sample production data to formulate hypotheses and applies a Z-test to determine whether the observed improvement is statistically significant.
