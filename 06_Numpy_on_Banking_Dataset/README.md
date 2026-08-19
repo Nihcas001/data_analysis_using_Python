@@ -1,1 +1,0 @@
-This program demonstrates the use of NumPy for numerical computation on customer transaction data. It covers array creation, indexing, slicing, and arithmetic operations for efficient manipulation and analysis of numerical records.
