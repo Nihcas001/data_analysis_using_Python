@@ -3,6 +3,7 @@ This program demonstrates the use of NumPy for numerical computation on customer
 A Complete Practical Question Set. For your students, I would give the following questions.
 
 Part A — Array Creation & Properties
+
     Import NumPy.
     Create the banking transaction array.
     Display the complete array.
@@ -12,6 +13,7 @@ Part A — Array Creation & Properties
     Display the data type.
     
 Part B — Indexing
+
     Display the first customer's record.
     Display the first customer's balance.
     Display the 10th customer's ID.
@@ -19,6 +21,7 @@ Part B — Indexing
     Display the last customer's balance.
     
 Part C — Slicing
+
     Display the first five customers.
     Display customers 6–10.
     Display the last five customers.
@@ -29,6 +32,7 @@ Part C — Slicing
     Extract Balance, Deposit and Withdrawal columns.
     
 Part D — Arithmetic
+
     Calculate new balance after deposits and withdrawals.
     Calculate balance after EMI deduction.
     Calculate 5% interest.
@@ -38,6 +42,7 @@ Part D — Arithmetic
     Calculate total withdrawals.
     
 Part E — Statistical Operations
+
     Find total balance.
     Find average balance.
     Find maximum balance.
@@ -47,6 +52,7 @@ Part E — Statistical Operations
     Find standard deviation.
     
 Part F — Filtering
+
     Find customers with balance > ₹70,000.
     Find customers with deposit > ₹15,000.
     Find customers with balance > ₹70,000 AND deposit > ₹15,000.
