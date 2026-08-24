@@ -1,0 +1,11 @@
+Customer_ID,Customer_Name,Age,City,Rating,Feedback,Response_Channel
+1021,Ravi Kumar,30.0,Delhi,4.0,Good,Online
+1022,Isha Mehta,,delhi,5.0,Excellent,Web
+1023,Deepak Singh,37.0,Mumbai ,3.0,Average,Mobile App
+1024,Meena Rao,24.0,Pune,,Good service,online
+1025,Sahil Gupta,29.0,CHANDIGARH,4.0,,Phone
+1026,Komal Sharma,40.0,Mumbai,2.0,Poor,Mobile app
+1027,Nitin Verma,,Pune,5.0,Excellent,
+1028,Aisha Patel,33.0,,3.0,Average,Web
+1029,Gaurav Singh,27.0,Delhi,,Good,Phone
+1030,Preeti Kumar,36.0,mumbai,4.0,Very good,Online

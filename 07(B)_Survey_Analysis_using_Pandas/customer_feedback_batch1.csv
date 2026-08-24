@@ -1,0 +1,21 @@
+Customer_ID,Customer_Name,Age,City,Rating,Feedback,Response_Channel
+1001,Aman Sharma,24.0,Delhi,5.0,Excellent service,Online
+1002,Priya Singh,29.0,delhi,4.0,good service,online
+1003,Rahul Kumar,,Mumbai,,,Mobile App
+1004,Simran Kaur,35.0,MUMBAI,3.0,Average,Web
+1005,Karan Mehta,41.0,Chandigarh,5.0,Excellent,
+1006,Neha Verma,27.0,Chandigarh ,4.0,Very good,Mobile app
+1007,Arjun Patel,32.0,Pune,2.0,poor delivery,Phone
+1008,Riya Gupta,,,,Good,Online
+1009,Vikas Singh,45.0,Delhi,5.0,,Web
+1010,Anjali Rao,26.0,pune,4.0,good,online
+1011,Mohit Sharma,31.0,Mumbai,3.0,Average service,Phone
+1012,Pooja Verma,38.0,Delhi,,Excellent service,
+1013,Rohit Kumar,,Chandigarh,4.0,Good,Web
+1014,Sneha Singh,23.0,PUNE,5.0,,Mobile App
+1015,Varun Mehta,36.0,Delhi,3.0,Poor,phone
+1016,Kavya Rao,28.0,Mumbai,,Very Good,Online
+1017,Aditya Patel,,,2.0,poor,Web
+1018,Nisha Gupta,42.0,Delhi,5.0,Excellent,
+1019,Manish Kumar,34.0,mumbai,4.0,Good service,Mobile app
+1020,Tanya Sharma,25.0,Chandigarh,3.0,,Online
