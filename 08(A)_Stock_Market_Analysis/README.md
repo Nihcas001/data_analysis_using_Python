@@ -34,3 +34,19 @@ Here:
 * pyplot → module used for creating plots
 * plt → short alias commonly used for pyplot
 
+## **Important Matplotlib Functions**
+
+For this practical, students should remember these functions:
+
+| Function             | Purpose             |
+| -------------------- | ------------------- |
+| `plt.plot()`         | Create line plot    |
+| `plt.scatter()`      | Create scatter plot |
+| `plt.hist()`         | Create histogram    |
+| `plt.title()`        | Add chart title     |
+| `plt.xlabel()`       | Label X-axis        |
+| `plt.ylabel()`       | Label Y-axis        |
+| `plt.legend()`       | Display legend      |
+| `plt.grid()`         | Display grid        |
+| `plt.show()`         | Display chart       |
+| `plt.tight_layout()` | Improve spacing     |
