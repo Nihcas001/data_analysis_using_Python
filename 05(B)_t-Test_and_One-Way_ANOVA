@@ -1,0 +1,180 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPt3jWP6DToCDShlv+Uimpp",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Nihcas001/data_analysis_using_Python/blob/main/05(B)_t-Test_and_One-Way_ANOVA\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4NIHQoilNgKr",
+        "outputId": "d02f3a67-2dcd-45f8-f13b-4bd96cde5f80"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Dataset:\n",
+            "   Patient_ID    Medicine  Pain_Reduction\n",
+            "0           1  Medicine_A             6.2\n",
+            "1           2  Medicine_A             5.8\n",
+            "2           3  Medicine_A             6.5\n",
+            "3           4  Medicine_A             5.9\n",
+            "4           5  Medicine_A             6.1\n",
+            "\n",
+            "----- ONE-SAMPLE t-TEST -----\n",
+            "Medicine A Mean: 6.133333333333332\n",
+            "Benchmark Mean: 6\n",
+            "t-statistic: 1.5811388300841736\n",
+            "p-value: 0.1361687507038891\n",
+            "Decision: Fail to Reject H0\n",
+            "Conclusion: There is insufficient evidence that Medicine A differs from the benchmark.\n",
+            "\n",
+            "----- ONE-WAY ANOVA -----\n",
+            "Medicine A Mean: 6.133333333333332\n",
+            "Medicine B Mean: 7.1466666666666665\n",
+            "Medicine C Mean: 5.093333333333333\n",
+            "F-statistic: 204.96460905349826\n",
+            "p-value: 2.146625448242097e-22\n",
+            "Decision: Reject H0\n",
+            "Conclusion: At least one medicine has a different mean effectiveness.\n"
+          ]
+        }
+      ],
+      "source": [
+        "import pandas as pd\n",
+        "from scipy import stats\n",
+        "from statsmodels.stats.multicomp import pairwise_tukeyhsd\n",
+        "\n",
+        "# -----------------------------------------\n",
+        "# 1. Load dataset\n",
+        "# -----------------------------------------\n",
+        "\n",
+        "df = pd.read_csv(\"medicine_effectiveness_dataset.csv\")\n",
+        "\n",
+        "print(\"Dataset:\")\n",
+        "print(df.head())\n",
+        "\n",
+        "# -----------------------------------------\n",
+        "# 2. One-Sample t-Test\n",
+        "# -----------------------------------------\n",
+        "\n",
+        "medicine_a = df[\n",
+        "    df[\"Medicine\"] == \"Medicine_A\"\n",
+        "][\"Pain_Reduction\"]\n",
+        "\n",
+        "benchmark = 6\n",
+        "alpha = 0.05\n",
+        "\n",
+        "t_stat, p_value = stats.ttest_1samp(\n",
+        "    medicine_a,\n",
+        "    benchmark\n",
+        ")\n",
+        "\n",
+        "print(\"\\n----- ONE-SAMPLE t-TEST -----\")\n",
+        "\n",
+        "print(\"Medicine A Mean:\",\n",
+        "      medicine_a.mean())\n",
+        "\n",
+        "print(\"Benchmark Mean:\",\n",
+        "      benchmark)\n",
+        "\n",
+        "print(\"t-statistic:\",\n",
+        "      t_stat)\n",
+        "\n",
+        "print(\"p-value:\",\n",
+        "      p_value)\n",
+        "\n",
+        "if p_value < alpha:\n",
+        "    print(\"Decision: Reject H0\")\n",
+        "    print(\"Conclusion: Medicine A differs significantly from the benchmark.\")\n",
+        "else:\n",
+        "    print(\"Decision: Fail to Reject H0\")\n",
+        "    print(\"Conclusion: There is insufficient evidence that Medicine A differs from the benchmark.\")\n",
+        "\n",
+        "\n",
+        "# -----------------------------------------\n",
+        "# 3. One-Way ANOVA\n",
+        "# -----------------------------------------\n",
+        "\n",
+        "medicine_a = df[\n",
+        "    df[\"Medicine\"] == \"Medicine_A\"\n",
+        "][\"Pain_Reduction\"]\n",
+        "\n",
+        "medicine_b = df[\n",
+        "    df[\"Medicine\"] == \"Medicine_B\"\n",
+        "][\"Pain_Reduction\"]\n",
+        "\n",
+        "medicine_c = df[\n",
+        "    df[\"Medicine\"] == \"Medicine_C\"\n",
+        "][\"Pain_Reduction\"]\n",
+        "\n",
+        "f_stat, p_value = stats.f_oneway(\n",
+        "    medicine_a,\n",
+        "    medicine_b,\n",
+        "    medicine_c\n",
+        ")\n",
+        "\n",
+        "print(\"\\n----- ONE-WAY ANOVA -----\")\n",
+        "\n",
+        "print(\"Medicine A Mean:\",\n",
+        "      medicine_a.mean())\n",
+        "\n",
+        "print(\"Medicine B Mean:\",\n",
+        "      medicine_b.mean())\n",
+        "\n",
+        "print(\"Medicine C Mean:\",\n",
+        "      medicine_c.mean())\n",
+        "\n",
+        "print(\"F-statistic:\",\n",
+        "      f_stat)\n",
+        "\n",
+        "print(\"p-value:\",\n",
+        "      p_value)\n",
+        "\n",
+        "if p_value < alpha:\n",
+        "    print(\"Decision: Reject H0\")\n",
+        "    print(\"Conclusion: At least one medicine has a different mean effectiveness.\")\n",
+        "else:\n",
+        "    print(\"Decision: Fail to Reject H0\")\n",
+        "    print(\"Conclusion: No statistically significant difference was detected.\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "ADZxX4yRNvCZ"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
